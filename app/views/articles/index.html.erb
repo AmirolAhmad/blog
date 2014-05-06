@@ -33,6 +33,11 @@
 		<%= will_paginate @articles %>
 	</div>
 	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+		<div class="form-group">
+		<%= form_tag(articles_path, method: "get") do %>
+		    <%= text_field_tag(:q, params[:search], class: 'form-control', placeholder: 'Search') %>
+		<% end %>
+		</div>
 		<div class="sidebar-module sidebar-module-inset">
 			<p>Learn how to code via TreeHouse</p>
 			<p><a href="http://referrals.trhou.se/amirolahmad" target="_blank"><img src="http://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/content/referral-badge-green.png" width="215"/></a></p>
