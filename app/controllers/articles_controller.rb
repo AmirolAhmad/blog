@@ -3,9 +3,6 @@ class ArticlesController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		#@articles = Article.all
-		#@articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
-
 		if params[:q]
 		    @articles = Article.search(params[:q]).order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
 		else

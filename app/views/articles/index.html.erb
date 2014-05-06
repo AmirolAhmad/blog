@@ -9,26 +9,33 @@
 
 <div class="row">
 	<div class="col-sm-8 blog-main">
-		<% @articles.each do |article| %>
-		<div class="blog-post">
-			<h2 class="blog-post-title">
-				<%= link_to article.title, article_path(article) %>
+		<% if @articles.empty? %>
+		  <h1>No articles found!</h1>
+		  <ul class="pager">
+			<li><%= link_to "Back", root_path %></li>
+		  </ul>
+		<% else %>
+			<% @articles.each do |article| %>
+			<div class="blog-post">
+				<h2 class="blog-post-title">
+					<%= link_to article.title, article_path(article) %>
 
-				<% if user_signed_in? %>
-				<div class="btn-group btn-group-xs">
-					<%= link_to 'Edit', edit_article_path(article), :class => "btn btn-primary" %>
-	  				<%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
-				</div>
-				<% end %>
+					<% if user_signed_in? %>
+					<div class="btn-group btn-group-xs">
+						<%= link_to 'Edit', edit_article_path(article), :class => "btn btn-primary" %>
+		  				<%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+					</div>
+					<% end %>
+					
+				</h2>
+				<p class="blog-post-meta">Created at <%= article.created_at.strftime("%b %d, %Y") %></p>
+				<%= simple_format(article.text.split[0..56].join(" ")) %>
 				
-			</h2>
-			<p class="blog-post-meta">Created at <%= article.created_at.strftime("%b %d, %Y") %></p>
-			<%= simple_format(article.text.split[0..56].join(" ")) %>
-			
-			<ul class="pager">
-				<li><%= link_to "Read more", article_path(article) %></li>
-			</ul>
-		</div>
+				<ul class="pager">
+					<li><%= link_to "Read more", article_path(article) %></li>
+				</ul>
+			</div>
+			<% end %>
 		<% end %>
 		<%= will_paginate @articles %>
 	</div>
