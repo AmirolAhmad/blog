@@ -38,25 +38,11 @@
 			<p><a href="http://referrals.trhou.se/amirolahmad" target="_blank"><img src="http://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/content/referral-badge-green.png" width="215"/></a></p>
 		</div>
 		<div class="sidebar-module">
-			<h4>Archieves</h4>
+			<h4>Articles</h4>
 			<ol class="list-unstyled">
-				<li><a href="">May 2014</a></li>
-				<li><a href="">April 2014</a></li>
-				<li><a href="">March 2014</a></li>
-				<li><a href="">February 2014</a></li>
-				<li><a href="">January 2014</a></li>
-				<li><a href="">December 2013</a></li>
-				<li><a href="">November 2013</a></li>
-				<li><a href="">October 2013</a></li>
-				<li><a href="">September 2013</a></li>
-				<li><a href="">August 2013</a></li>
-				<li><a href="">July 2013</a></li>
-				<li><a href="">June 2013</a></li>
-				<li><a href="">May 2013</a></li>
-				<li><a href="">April 2013</a></li>
-				<li><a href="">March 2013</a></li>
-				<li><a href="">February 2013</a></li>
-				<li><a href="">January 2013</a></li>
+				<% @articles.each do |article| %>
+				<li><%= link_to article.title, article_path(article) %> <small>at <%= article.created_at.strftime("%b %d, %Y") %></small></li>
+				<% end %>
 			</ol>
 		</div>
 	</div>

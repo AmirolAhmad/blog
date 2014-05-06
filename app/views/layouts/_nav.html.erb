@@ -2,8 +2,8 @@
   <div class="container">
     <nav class="blog-nav">
     	<%= link_to 'Home', root_path, :class => "blog-nav-item" %>
-    	<%= link_to 'About', root_path, :class => "blog-nav-item" %>
-      	<%= link_to 'Contact', root_path, :class => "blog-nav-item" %>
+    	<%= link_to 'About', about_path, :class => "blog-nav-item" %>
+      	<%= link_to 'Contact', "mailto:9w2pdf@gmail.com", :class => "blog-nav-item" %>
 
         <% if user_signed_in? %>
         <%= link_to 'New article', new_article_path, :class => "blog-nav-item" %>
