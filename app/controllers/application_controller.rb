@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   ensure_security_headers(
 	:hsts => {:include_subdomains => true, :max_age => 20.years.to_i},
 	:x_frame_options => 'DENY',
-	:x_content_type_options = "nosniff",
-	:x_xss_protection = {:value => 1, :mode => 'block'},
+	:x_content_type_options => 'nosniff',
+	:x_xss_protection => {:value => 1, :mode => 'block'},
 	:csp => false
   )
 end
