@@ -2,10 +2,14 @@
   <h1><%= @article.title %></h1>
   <p class="blog-post-meta">
   	Created at <%= @article.created_at.strftime("%b %d, %Y") %>
+
+	<% if user_signed_in? %>
   	<div class="btn-group btn-group-xs">
 	  	<%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-primary" %>
 	  	<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
 	</div>
+	<% end %>
+
   </p>
 </div>
 

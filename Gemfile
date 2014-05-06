@@ -5,7 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+
+# Use postgresql as the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -36,6 +39,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'will_paginate', '~> 3.0'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
