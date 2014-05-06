@@ -1,5 +1,7 @@
+<% provide(:title, 'Edit an article') %>
+
 <div class="page-header">
-  <h1>New Article <small>Create new article</small></h1>
+  <h1>Edit Article <small>Edit an article</small></h1>
 </div>
 
 <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
