@@ -7,4 +7,8 @@ class Article < ActiveRecord::Base
 	  where("text LIKE ?", "%#{query}%")
 	end
 
+	def to_param
+	    [id, title.parameterize, created_at.strftime("%m%d%Y")].join("-")
+	end
+
 end
