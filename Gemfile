@@ -42,6 +42,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'devise'
 gem 'newrelic_rpm'
 gem 'dalli'
+gem 'secure_headers'
 
 # for heroku
 gem 'rails_12factor', group: :production
