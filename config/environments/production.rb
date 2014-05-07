@@ -81,6 +81,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = { host: 'mramirol.com' }
+
   if ENV["pub-memcache-12438.us-east-1-4.3.ec2.garantiadata.com:12438"]
     config.cache_store = :dalli_store, ENV["pub-memcache-12438.us-east-1-4.3.ec2.garantiadata.com:12438"].split(','), { :username => ENV["memcached-app24908680"], :password => ENV["4mZep0jQN2HcoGqJ"] }
   end
