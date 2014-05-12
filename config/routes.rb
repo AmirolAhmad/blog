@@ -2,9 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :articles
 
-  #match 'about' => 'welcome#about', via: 'get'
-
-  get 'welcome/about', controller: 'welcome', action: 'about'
+  match 'about' => 'welcome#about', via: 'get'
   
   root to: 'articles#index'
 
