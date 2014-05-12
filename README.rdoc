@@ -1,3 +1,5 @@
 == AmirolAhmad's official blog
 
+[![Dependency Status](https://gemnasium.com/AmirolAhmad/blog.svg)](https://gemnasium.com/AmirolAhmad/blog)
+
 My own blog based on Ruby on Rails with some great features like summernote editor
