@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
 	def index
 		if params[:q]
-		    @articles = Article.search(params[:q]).order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+		    @articles = Article.search(params[:q].to_s).order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
 		else
 		    @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
 		end
@@ -26,15 +26,15 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
-		@article = Article.find(params[:id])
+		@article = Article.find(params[:id].to_s)
 	end
 
 	def edit
-		@article = Article.find(params[:id])
+		@article = Article.find(params[:id].to_s)
 	end
 
 	def update
-		@article = Article.find(params[:id])
+		@article = Article.find(params[:id].to_s)
 
 		if @article.update(article_params)
 			redirect_to @article
@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def destroy
-		@article = Article.find(params[:id])
+		@article = Article.find(params[:id].to_s)
 		@article.destroy
 
 		redirect_to articles_path
