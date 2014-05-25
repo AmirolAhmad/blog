@@ -43,7 +43,7 @@
 			</div>
 			<% end %>
 		<% end %>
-		<%= will_paginate @articles %>
+		<%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
 	</div>
 	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
 		<div class="form-group">
