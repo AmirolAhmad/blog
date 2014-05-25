@@ -75,7 +75,7 @@
 		<div class="sidebar-module">
 			<h4>Articles</h4>
 			<ol class="list-unstyled">
-				<% @articles.each do |article| %>
+				<% @articles_archieve.each do |article| %>
 				<li><%= link_to article.title, article_path(article) %> <small>at <%= article.created_at.strftime("%b %d, %Y") %></small></li>
 				<% end %>
 			</ol>

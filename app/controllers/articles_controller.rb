@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
 		    @articles = Article.search(params[:q].to_s).order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
 		else
 		    @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+		    @articles_archieve = Article.all.order("created_at DESC")
 		end
 	end
 
