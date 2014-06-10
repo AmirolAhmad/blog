@@ -10,7 +10,7 @@ class Article < ActiveRecord::Base
 	end
 
 	def to_param
-	    [id, title.parameterize, created_at.strftime("%m%d%Y")].join("-")
+	    [id, title.parameterize].join("-")
 	end
 
 end
