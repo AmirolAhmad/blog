@@ -4,14 +4,14 @@
 <div class="page-header">
   <h1><%= @article.title %></h1>
   <p class="blog-post-meta">
-  	Created at <%= @article.created_at.strftime("%b %d, %Y") %>
+    Created at <%= @article.created_at.strftime("%b %d, %Y") %>
 
-	<% if user_signed_in? %>
-  	<div class="btn-group btn-group-xs">
-	  	<%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-primary" %>
-	  	<%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
-	</div>
-	<% end %>
+    <% if user_signed_in? %>
+    <div class="btn-group btn-group-xs">
+        <%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-primary" %>
+        <%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+    </div>
+    <% end %>
 
   </p>
 </div>
@@ -23,11 +23,11 @@
 <!-- Display Disqus Comment Box -->
 <div id="disqus_thread"></div>
 <script type="text/javascript">
- 
+
     var disqus_shortname = '<%= Article::DISQUS_SHORTNAME %>';
     var disqus_identifier = '<%= @article.id %>';
     var disqus_url = 'http://mramirol.com<%= url_for(@article) %>';
- 
+
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
