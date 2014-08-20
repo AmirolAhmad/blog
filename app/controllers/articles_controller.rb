@@ -29,6 +29,12 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id].to_s)
+
+		respond_to do |format|
+    		format.html
+	      	format.json { render json: @article }
+	      	format.xml { render xml: @article }
+	    end
 	end
 
 	def edit
