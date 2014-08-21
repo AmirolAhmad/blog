@@ -1,8 +1,3 @@
-default: &default
-  adapter: postgresql
-  pool: 5
-  #timeout: 5000
-
 development:
   adapter: mysql2
   host: localhost
@@ -16,11 +11,13 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
+  adapter: postgresql
+  pool: 5
   database: db/test.sqlite3
 
 production:
-  <<: *default
+  adapter: postgresql
+  pool: 5
   host: ec2-54-204-40-96.compute-1.amazonaws.com
   encoding: unicode
   database: dsri4a3e2koah
