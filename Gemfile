@@ -4,9 +4,6 @@ ruby "2.1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
@@ -17,7 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer',  platforms: :ruby
+# gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -32,9 +29,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'devise'
@@ -42,8 +36,15 @@ gem 'newrelic_rpm'
 gem 'dalli'
 gem 'secure_headers'
 
-# for heroku
-gem 'rails_12factor', group: :production
+group :development do
+	gem 'spring'
+  	gem "mysql2"
+end
+
+group :production do
+	gem 'rails_12factor'
+  	gem "pg"
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
