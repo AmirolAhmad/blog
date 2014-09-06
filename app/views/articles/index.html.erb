@@ -76,8 +76,16 @@
 			<h4>Articles</h4>
 			<ol class="list-unstyled">
 				<% @articles_archieve.each do |article| %>
-				<li><%= link_to article.title, article_path(article) %> <small>at <%= article.created_at.strftime("%b %d, %Y") %></small></li>
+				<li><%= link_to article.title, article_path(article) %><br /><small>Created at <%= article.created_at.strftime("%b %d, %Y") %></small></li>
 				<% end %>
+			</ol>
+		</div>
+		<div class="sidebar-module">
+			<h3>Feed from Rails Blog</h3>
+			<ol class="list-unstyled">
+			<% @feeds.each do |entry| %>
+				<li><%= link_to h(entry.name), entry.url, :target => "_blank" %></li>
+			<% end %>
 			</ol>
 		</div>
 	</div>

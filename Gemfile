@@ -36,6 +36,7 @@ gem 'newrelic_rpm'
 gem 'dalli'
 gem 'secure_headers'
 gem 'ckeditor_rails'
+gem 'feedjira'
 
 group :development do
 	gem 'spring'

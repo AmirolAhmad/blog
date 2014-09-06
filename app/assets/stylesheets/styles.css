@@ -133,8 +133,6 @@ h6, .h6 {
   margin-bottom: 0;
 }
 
-
-
 /* Pagination */
 .pager {
   margin-bottom: 60px;
@@ -146,7 +144,6 @@ h6, .h6 {
   text-align: center;
   border-radius: 30px;
 }
-
 
 /*
  * Blog posts
@@ -166,7 +163,6 @@ h6, .h6 {
   color: #999;
 }
 
-
 /*
  * Footer
  */
@@ -177,4 +173,9 @@ h6, .h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
+}
+
+.list-unstyled > li {
+  border-bottom: 1px dotted #666666;
+  padding: 5px 0;
 }

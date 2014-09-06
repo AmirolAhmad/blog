@@ -11,14 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506031605) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20140906035728) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feed_entries", force: true do |t|
+    t.string   "name"
+    t.text     "summary"
+    t.string   "url"
+    t.datetime "published_at"
+    t.string   "guid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
