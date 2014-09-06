@@ -8,9 +8,9 @@
 	<meta name="keyword" content="ruby on rails, rails developer, freelancer, github, malaysian rails developer, rails community, freelance rails developer, tutorial, php laravel, server administrator, ror, software engineer, rubyst">
 	<meta name="author" content="AmirolAhmad">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<%= stylesheet_link_tag 'application', media: 'all' %>
+	<%= stylesheet_link_tag 'application', media: 'all', "data-turbolinks-track" => true  %>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
-	<%= javascript_include_tag 'application' %>
+	<%= javascript_include_tag 'application', "data-turbolinks-track" => true  %>
 	<%= favicon_link_tag 'favicon.ico' %>
 	<%= csrf_meta_tags %>
 	<script>
@@ -49,6 +49,8 @@
 
 	<!-- Google+ Share Button -->
 	<script src="https://apis.google.com/js/plusone.js"></script>
+
+	<div id="fb-root"></div>
 
 	<%= render "layouts/nav" %>
 
