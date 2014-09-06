@@ -16,7 +16,7 @@
   </p>
 </div>
 
-<p><%= @article.text.html_safe %></p>
+<p><%= simple_format(@article.text) %></p>
 
 <hr>
 
