@@ -35,7 +35,7 @@
 
 					<%= link_to "0 comment", article_path(article, :anchor => "disqus_thread"), :"data-disqus-identifer" => article.id, :class => 'btn btn-primary btn-xs' %>
 				</p>
-				<%= simple_format(article.text.split[0..56].join(" ")) %>
+				<%= simple_format(article.text.split[0..26].join(" ")) %>
 				
 				<ul class="pager">
 					<li><%= link_to "Read more", article_path(article) %></li>

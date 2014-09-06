@@ -35,6 +35,7 @@ gem 'devise'
 gem 'newrelic_rpm'
 gem 'dalli'
 gem 'secure_headers'
+gem 'ckeditor_rails'
 
 group :development do
 	gem 'spring'
