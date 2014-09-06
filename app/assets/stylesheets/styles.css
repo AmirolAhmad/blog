@@ -2,6 +2,8 @@
  * Globals
  */
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+
 @font-face {
   font-family: 'proxima_nova_alt_regular';
   src: url(../fonts/proxima_nova_alt_regular-webfont.eot);
@@ -14,8 +16,8 @@
 }
 
 body {
-  font-family: 'proxima_nova_alt_regular', sans-serif;
-  color: #555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
 }
 
 h1, .h1,
@@ -25,7 +27,8 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 0;
-    font-family: 'proxima_nova_alt_regular', sans-serif;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', serif;
   font-weight: normal;
   color: #333;
 }
@@ -53,6 +56,8 @@ h6, .h6 {
 
 /* Nav links */
 .blog-nav-item {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
   position: relative;
   display: inline-block;
   padding: 10px;
@@ -99,6 +104,7 @@ h6, .h6 {
   font-weight: normal;
 }
 .blog-description {
+  font-family: 'Roboto Slab', serif;
   font-size: 20px;
   color: #999;
 }
@@ -152,10 +158,12 @@ h6, .h6 {
   margin-bottom: 60px;
 }
 .blog-post-title {
+  font-weight: 600;
   margin-bottom: 5px;
   font-size: 40px;
 }
 .blog-post-meta {
+  font-family: 'Roboto Slab', serif;
   margin-bottom: 20px;
   color: #999;
 }
