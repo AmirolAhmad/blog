@@ -5,10 +5,10 @@ class ArticlesController < ApplicationController
 	def index
 		if params[:q]
 		    @articles = Article.search(params[:q].to_s).order("created_at DESC").paginate(:page => params[:page], :per_page => 7)
-		    @articles_archieve = Article.all.order("RANDOM()").limit(10) #change RANDOM to RAND when in localhost
+		    @articles_archieve = Article.all.order("RAND()").limit(10) #change RANDOM to RAND when in localhost
 		else
 		    @articles = Article.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 7)
-		    @articles_archieve = Article.all.order("RANDOM()").limit(10) #change RANDOM to RAND when in localhost
+		    @articles_archieve = Article.all.order("RAND()").limit(10) #change RANDOM to RAND when in localhost
 		end
 		@feeds = FeedEntry.all.order("published_at DESC").limit(10)
 	end

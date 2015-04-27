@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.2"
+ruby "2.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -40,12 +40,12 @@ gem 'feedjira'
 
 group :development do
 	gem 'spring'
-  	gem "mysql2"
+	gem "mysql2"
 end
 
 group :production do
 	gem 'rails_12factor'
-  	gem "pg"
+	gem "pg"
 end
 
 # Use ActiveModel has_secure_password
